@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/movie_details_border">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/movieImageCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="@dimen/margin_padding_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/movieImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/popularity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/md_black"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieImageCard"
+        tools:text="2150" />
+
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_padding_size_small"
+        android:layout_marginTop="@dimen/margin_padding_size_xsmall"
+        android:layout_marginEnd="@dimen/margin_padding_size_small"
+        android:gravity="center"
+        android:textColor="@color/md_black"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popularity"
+        tools:text="Hunger Games " />
+
+    <TextView
+        android:id="@+id/movieDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_padding_size_small"
+        android:layout_marginTop="@dimen/margin_padding_size_xsmall"
+        android:layout_marginEnd="@dimen/margin_padding_size_small"
+        android:gravity="start"
+        android:textColor="@color/md_blue_grey_600"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieTitle"
+        tools:text="List of key features: bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla " />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
